@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Game Store</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="games.html">Games</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="loginNav">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="mainContent" class="text-center mt-5">
+            <h1>Welcome to the Game Store</h1>
+            <p>Explore our wide variety of games and find your next adventure!</p>
+            <button class="btn btn-primary" id="loginButton">Go to Login</button>
+        </div>
+
+        <div id="loginContainer" class="d-none">
+            <h2 class="text-center">Login</h2>
+            <form class="mb-4 mx-auto" style="max-width: 400px;">
+                <div class="mb-3">
+                    <label for="textInput" class="form-label">Your Name</label>
+                    <input type="text" id="textInput" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="passwordInput" class="form-label">Password</label>
+                    <input type="password" id="passwordInput" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="emailInput" class="form-label">Email</label>
+                    <input type="email" id="emailInput" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-success w-100">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const loginButton = document.getElementById('loginButton');
+        const loginNav = document.getElementById('loginNav');
+        const mainContent = document.getElementById('mainContent');
+        const loginContainer = document.getElementById('loginContainer');
+
+        // Show login page on button click
+        loginButton.addEventListener('click', () => {
+            mainContent.classList.add('d-none');
+            loginContainer.classList.remove('d-none');
+        });
+
+        // Show login page on navbar link click
+        loginNav.addEventListener('click', (e) => {
+            e.preventDefault();
+            mainContent.classList.add('d-none');
+            loginContainer.classList.remove('d-none');
+        });
+    </script>
+</body>
+</html>
