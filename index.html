@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,39 +70,89 @@
             </div>
         </nav>
 
-        <h1>Welcome to the Game Store</h1>
-        <h2>Find your favorite games!</h2>
-        <h3>Top-rated games available now</h3>
-        <h4>Exclusive deals</h4>
-        <h5>Shop with confidence</h5>
-        <h6>Stay connected</h6>
+        <h1>Bem vindo a Game Store</h1>
+        <h2>Encontre seus jogos favoritos!</h2>
+        <h3>Lançamentos disponíveis</h3>
+        <h4>Ofertas Exclusivas</h4>
+        <h5>Compre com confiança</h5>
 
-        <p class="mb-3">Explore a wide variety of games in our store. Use the filters below to find your favorites!</p>
+        <p class="mb-3">Explora uma variedade de jogos na nossa loja!</p>
+
+        <div id="mainContent" class="text-center mt-5">
+            <div class="news-section mt-5">
+                <h2>Ultimas notícias</h2>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://img-cdn.hltv.org/gallerypicture/eNFRc95--El3YT3fdEaXib.png?ixlib=java-2.1.0&w=1200&s=b368b07d32f397c599025770fe16bdc3" class="img-fluid rounded-start" alt="Game News">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Novo lançamento: Counter Strike 2</h5>
+                                <p class="card-text">The much-awaited game, Cyber Adventure 2025, has finally been released. Gamers worldwide are raving about its immersive graphics and gripping storyline. Don't miss out on this masterpiece!</p>
+                                <p class="card-text"><small class="text-muted">Posted 2 hours ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/2488620/capsule_616x353.jpg?t=1736517761" class="img-fluid rounded-start" alt="Game Update">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Fórmula 1 2024 já disponível</h5>
+                                <p class="card-text">Fantasy Quest has just released its latest expansion pack, featuring new maps, characters, and challenges. Dive back into the fantasy world with this exciting update!</p>
+                                <p class="card-text"><small class="text-muted">Posted 1 day ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="https://backbone.com/_next/image/?url=https%3A%2F%2Ffiles.backbon3.com%2Fcdn-cgi%2Fimage%2Fwidth%3D648%2Cheight%3D364%2Cfit%3Dscale-down%2Fcontent%2Foriginals%2Fb303eb97-8e71-5865-85d2-786ce15f1378-tile-image.jpg&w=640&q=75&dpl=dpl_5HTHv64ZwAxDHJKYsyy962aveKX5" class="img-fluid rounded-start" alt="Esports Event">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Euro Truck Simulator 2 um sucesso de vendas</h5>
+                                <p class="card-text">The Global Esports Championship concluded yesterday, with Team Zenith emerging victorious. Watch the highlights and relive the best moments of the tournament!</p>
+                                <p class="card-text"><small class="text-muted">Posted 3 days ago</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<h2> Publique a sua opinião sobre um jogo</h2>
 
         <form class="mb-4">
 
             <div class="mb-3">
-                <label for="dateInput" class="form-label">Date of Purchase</label>
+                <label for="dateInput" class="form-label">Data de compra</label>
                 <input type="date" id="dateInput" class="form-control">
             </div>
             <div class="mb-3">
-                <label for="fileInput" class="form-label">Upload Receipt</label>
+                <label for="fileInput" class="form-label">Upload do recibo</label>
                 <input type="file" id="fileInput" class="form-control">
             </div>
             <div class="mb-3">
-                <label for="textareaInput" class="form-label">Comments</label>
+                <label for="textareaInput" class="form-label">Comentário</label>
                 <textarea id="textareaInput" class="form-control" rows="4"></textarea>
             </div>
             <div class="mb-3">
-                <label for="selectInput" class="form-label">Select a Genre</label>
+                <label for="selectInput" class="form-label">Selecione um gênero</label>
                 <select id="selectInput" class="form-select">
-                    <option value="action">Action</option>
-                    <option value="adventure">Adventure</option>
+                    <option value="action">Ação</option>
+                    <option value="adventure">Aventura</option>
                     <option value="rpg">RPG</option>
+                    <option value="rpg">Corrida</option>
                 </select>
             </div>
             <div class="mb-3">
-                <label for="datalistInput" class="form-label">Search Games</label>
+                <label for="datalistInput" class="form-label">Procure um Game</label>
                 <input type="text" id="datalistInput" class="form-control" list="gamesList">
                 <datalist id="gamesList">
                     <option value="Game 1">
@@ -112,28 +162,28 @@
             </div>
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="checkboxInput">
-                <label class="form-check-label" for="checkboxInput">Subscribe to newsletter</label>
+                <label class="form-check-label" for="checkboxInput">Se inscreva na nossa newsletter</label>
             </div>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="exampleRadios" id="radio1" value="option1">
-                <label class="form-check-label" for="radio1">Yes</label>
+                <label class="form-check-label" for="radio1">Sim</label>
             </div>
             <div class="form-check">
                 <input type="radio" class="form-check-input" name="exampleRadios" id="radio2" value="option2">
-                <label class="form-check-label" for="radio2">No</label>
+                <label class="form-check-label" for="radio2">Não</label>
             </div>
             <button type="submit" class="btn btn-success mt-3">Submit</button>
         </form>
 
-        <div class="absolute-element">Contact Us</div>
-        <div class="inline-block-element">Shop Now!</div>
+        <div class="absolute-element">Contate-nos</div>
+        <div class="inline-block-element">Compre agora!</div>
         <div class="flex-container">
-            <div>Game 1</div>
-            <div>Game 2</div>
-            <div>Game 3</div>
+            <div>Counter Strike 2</div>
+            <div>Fórmula 1 2024</div>
+            <div>Euro Truck Simulator 2</div>
         </div>
 
-        <div class="fixed-element">Special Offer: Free Shipping!</div>
+        <div class="fixed-element">Oferta Especial: Entrega Grátis!</div>
 
         <table class="table table-bordered mt-4">
             <thead>
@@ -146,17 +196,17 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td>Game 1</td>
+                    <td>Counter Strike 2</td>
                     <td>$49.99</td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td>Game 2</td>
+                    <td>Fórmula 1 2024</td>
                     <td>$59.99</td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td>Game 3</td>
+                    <td>Euro Truck Simulator 2</td>
                     <td>$39.99</td>
                 </tr>
             </tbody>
@@ -167,9 +217,9 @@
     <script>
         // Array of games
         const games = [
-            { name: "Game 1", price: 49.99 },
-            { name: "Game 2", price: 59.99 },
-            { name: "Game 3", price: 39.99 }
+            { name: "Counter Strike 2", price: 49.99 },
+            { name: "Fórmula 1 2024", price: 59.99 },
+            { name: "Euro Truck Simulator 2", price: 39.99 }
         ];
 
         // Cart as an array of objects
